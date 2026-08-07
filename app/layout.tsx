@@ -47,7 +47,7 @@ export default function RootLayout({
         {children}
         <Script
           src="https://agent.namu-iapt.com/widget.js"
-          data-bot-id="3"
+          data-bot-id="2"
           strategy="afterInteractive"
         />
       </body>
