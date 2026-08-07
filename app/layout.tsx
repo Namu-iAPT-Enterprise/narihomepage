@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, DM_Sans, DM_Mono, Noto_Serif_KR } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -42,7 +43,14 @@ export default function RootLayout({
       lang="ko"
       className={`${cormorant.variable} ${dmSans.variable} ${dmMono.variable} ${notoSerifKR.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {children}
+        <Script
+          src="https://agent.namu-iapt.com/widget.js"
+          data-bot-id="2"
+          strategy="afterInteractive"
+        />
+      </body>
     </html>
   );
 }
